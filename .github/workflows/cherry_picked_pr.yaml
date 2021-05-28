@@ -1,0 +1,16 @@
+name: Update description of cherry-picked pull request
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update_description:
+    name: Update description
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Update description 
+        uses: tom-borcin/test-repo@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
