@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Update description 
-        uses: ./.github/workflows@master
+        uses: .github/workflows@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
