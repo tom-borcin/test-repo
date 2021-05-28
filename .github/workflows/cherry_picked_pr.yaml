@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Update description 
-        uses: tom-borcin/test-repo@master
+        uses: ./.github/workflows/cherry_picked_pr@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
