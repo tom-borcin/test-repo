@@ -13,6 +13,4 @@ jobs:
       - name: Update description 
         uses: ./.github/workflows
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
