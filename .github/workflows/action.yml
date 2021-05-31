@@ -1,16 +1,19 @@
-name: Update description of cherry-picked pull request
+name: Sync issue comments to JIRA
 
-on:
-  pull_request:
-    types: [closed]
+# This workflow will be triggered when new issue comment is created (including PR comments)
+on: issue_comment
 
 jobs:
-  update_description:
-    name: Update description
+  sync_issue_comments_to_jira:
+    name: Sync Issue Comments to Jira
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Update description 
-        uses: ./.github/workflows
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Sync issue comments to JIRA
+        uses: tom-borcin/github-actions/sync_issues_to_jira@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JIRA_PASS: ${{ secrets.JIRA_PASS }}
+          JIRA_PROJECT: IDFSYNTEST
+          JIRA_URL: ${{ secrets.JIRA_URL }}
+          JIRA_USER: ${{ secrets.JIRA_USER }}
