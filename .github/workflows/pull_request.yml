@@ -1,7 +1,9 @@
 name: Sync pull requests to Jira
 
 # This workflow will be triggered when a new issue is opened
-on: pull_request
+on: 
+  pull_request:
+    types: [closed]
 
 jobs:
   sync_pull_requests_to_jira:
