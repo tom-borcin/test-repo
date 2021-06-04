@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with:
-          ref: master
+          ref: ${{ github.ref }}
       - name: Sync GitHub issues to Jira project
         uses: tom-borcin/github-actions/sync_issues_to_jira@master
         env:
