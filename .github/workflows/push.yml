@@ -13,7 +13,6 @@ jobs:
       - name: Push to repository branch
         uses: tom-borcin/github-actions/sync_issues_to_jira@master
         env:
-          PUSH_EVENT: True
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JIRA_PASS: ${{ secrets.JIRA_PASS }}
           JIRA_PROJECT: IDFSYNTEST
