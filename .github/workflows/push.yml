@@ -2,7 +2,7 @@ name: Push to repository branch
 
 # This workflow will be triggered when a new issue is opened
 on: 
-  push
+  issue_comment
 
 jobs:
   sync_pull_requests_to_jira:
