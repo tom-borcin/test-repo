@@ -4,7 +4,7 @@ name: Push to repository branch
 on: push
 
 jobs:
-  push_to repository_branch:
+  push_to_repository_branch:
     name: Push to repository branch
     runs-on: ubuntu-latest
     steps:
