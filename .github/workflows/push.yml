@@ -5,15 +5,12 @@ on:
   push
 
 jobs:
-  sync_pull_requests_to_jira:
+  check_push_to repository:
     name: Push to repository branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Push to repository branch
-        uses: tom-borcin/github-actions/sync_issues_to_jira@master
+        uses: tom-borcin/github-actions/push_event@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          JIRA_PASS: ${{ secrets.JIRA_PASS }}
-          JIRA_URL: ${{ secrets.JIRA_URL }}
-          JIRA_USER: ${{ secrets.JIRA_USER }}
