@@ -1,11 +1,10 @@
 name: Push to repository branch
 
 # This workflow will be triggered when a new issue is opened
-on: 
-  push
+on: push
 
 jobs:
-  check_push_to repository:
+  push_to repository_branch:
     name: Push to repository branch
     runs-on: ubuntu-latest
     steps:
