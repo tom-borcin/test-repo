@@ -1,0 +1,67 @@
+name: Bug report
+description: Report bugs
+labels: ['Type: Bug']
+body:
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: On which OS does this issue occur on?
+      placeholder: ex. Windows 11 21H2, macOS 12.3 or Ubuntu 22.04
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ESP-IDF Version
+      description: The output of `git describe` if working with the sources, output of `idf.py --version` otherwise. If possible, consider updating ESP-IDF.
+      placeholder: ex. v3.3.6 or v4.2-dev-306-gbeb3611ca
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python Version
+      description: Which Python version are you using? Run `python -V` to check this.
+      placeholder: ex. Python 3.9.6
+    validations:
+      required: true
+  - type: input
+    id: other
+    attributes:
+      label: <other_sw> Version
+      description: Which <other_sw> version are you using? Run `<other_sw> --version` to check this.
+      placeholder: ex. <other_sw> 1.2.3
+    validations:
+      required: false
+  - type: input
+    id: command
+    attributes:
+      label: Full ESP-IDF command that was run.
+      description: Please enter the full ESP-IDF command.
+      placeholder: ex. `idf.py -p /dev/ttyUSB0 flash monitor`
+  - type: textarea
+    id: output
+    attributes:
+      label: ESP-IDF Output
+      description: Provide the full output log.
+      placeholder: Copy and paste all lines of output here.
+      render: shell
+  - type: textarea
+    id: expected
+    attributes:
+      label: What is the expected behaviour?
+      description: Please provide a clear and concise description of the expected behaviour.
+      placeholder: ex. Flash onto the Device and launch IDF Monitor.
+  - type: textarea
+    id: more-info
+    attributes:
+      label: More Information
+      description: Do you have any other information from investigating this?
+      placeholder: ex. I tried on my friend's Windows 10 PC and the command works there.
+  - type: textarea
+    id: other-remarks
+    attributes:
+      label: Other Steps to Reproduce
+      description: Is there any other information you can think of which will help us reproduce this problem?
+      placeholder: ex. Only crashes on first day of the month.

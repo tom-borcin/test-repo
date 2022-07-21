@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Espressif Forum
+    url: https://esp32.com
+    about: Discussion forum for the ESP32 Hybrid Wi-Fi & Bluetooth chip.
+  - name: Technical Documents
+    url: https://www.espressif.com/en/support/documents/technical-documents
+    about: Technical documentation for Espressif hardware
+  - name: ESP-IDF Programming Guide
+    url: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html
+    about: Official documentation for Espressif IoT Development Framework. Describes using ESP-IDF with the ESP32 SoC
