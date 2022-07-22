@@ -163,9 +163,10 @@ body:
       label: Other items if possible.
       description: Please attach any of theese items if possible.
       placeholder:
-        sdkconfig file (attach the sdkconfig file from your project folder) `\n` `<br/>`
+        sdkconfig file (attach the sdkconfig file from your project folder) <br/>
         elf file in the build folder (note this may contain all the code details and symbols of your project.) \n
         coredump (This provides stacks of tasks.)
+      render: Markdown
     validations:
       required: false
   - type: textarea
