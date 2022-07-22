@@ -136,8 +136,12 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce.
-      description: Please list here steps needed to reproduce the issue?
-      placeholder: ex. 1. TODO  2.TODO 3. TODO...
+      description: 'How do you trigger this bug? Please walk us through it step by step.'
+      value: |
+        1. TODO
+        2. TODO
+        3. TODO
+        ...
     validations:
       required: true
   - type: textarea
@@ -162,12 +166,10 @@ body:
     attributes:
       label: Other items if possible.
       description: Please attach any of theese items if possible.
-      placeholder:
-        sdkconfig file (attach the sdkconfig file from your project folder)  
-        elf file in the build folder (note this may contain all the code details and symbols of your project.) <br />
-        coredump (This provides stacks of tasks.)\
-        aaaa
-      render: Markdown
+      value: |
+        sdkconfig file (attach the sdkconfig file from your project folder)
+        elf file in the build folder (note this may contain all the code details and symbols of your project.)
+        coredump (This provides stacks of tasks.)
     validations:
       required: false
   - type: textarea
