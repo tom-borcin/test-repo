@@ -25,11 +25,11 @@ body:
   - type: input
     id: kit_version
     attributes:
-      label: Kit which (for WroverKit/PicoKit/DevKitC).
+      label: Kit version (for WroverKit/PicoKit/DevKitC).
       description: On what Development Kit version does this issue occur on? Run `TODO` to find it.
       placeholder: ex. v1 | v2 | v3 | v4
     validations:
-      required: true
+      required: false
   - type: input
     id: idf_version
     attributes:
@@ -158,8 +158,21 @@ body:
     validations:
       required: false
   - type: textarea
+    id: other_items
+    attributes:
+      label: Other items if possible.
+      description: Please attach any of theese items if possible.
+      placeholder:
+        sdkconfig file (attach the sdkconfig file from your project folder)
+        elf file in the build folder (note this may contain all the code details and symbols of your project.)
+        coredump (This provides stacks of tasks.)
+    validations:
+      required: false
+  - type: textarea
     id: more-info
     attributes:
       label: More Information.
       description: Do you have any other information from investigating this?
       placeholder: ex. I tried on my friend's Windows 10 PC and the command works there.
+    validations:
+      required: false
