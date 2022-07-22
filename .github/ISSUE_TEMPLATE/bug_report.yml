@@ -138,9 +138,9 @@ body:
       label: Steps to reproduce.
       description: 'How do you trigger this bug? Please walk us through it step by step.'
       value: |
-        1. TODO
-        2. TODO
-        3. TODO
+        1. Step
+        2. Step
+        3. Step
         ...
     validations:
       required: true
