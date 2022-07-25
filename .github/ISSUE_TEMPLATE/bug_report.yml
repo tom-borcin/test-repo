@@ -150,13 +150,13 @@ body:
       label: Code to reproduce this issue.
       description: Please paste here the codeto reproduce this issue. If your code is longer than 30 lines, [GIST](https://gist.github.com/) is preferred.
       value: |
-        void app_main() 
-        { 
+        void app_main()
+        {
           std::cout << "Hello World!";
         }
       render: C++
     validations:
-      required: true
+      required: false
   - type: textarea
     id: debug_logs
     attributes:
@@ -182,5 +182,20 @@ body:
       label: More Information.
       description: Do you have any other information from investigating this?
       placeholder: ex. I tried on my friend's Windows 10 PC and the command works there.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Environment
+      description: |
+        examples:
+          - **OS**: Ubuntu 20.04
+          - **Node**: 13.14.0
+          - **npm**: 7.6.3
+      value: |
+        - OS:
+        - Node:
+        - npm:
+      render: Markdown
     validations:
       required: false
