@@ -157,7 +157,7 @@ body:
           std::cout << "Hello World!";
         }
         ```
-      render: C++
+      render: Markdown
     validations:
       required: false
   - type: textarea
