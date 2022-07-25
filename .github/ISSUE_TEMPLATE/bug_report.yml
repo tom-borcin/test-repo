@@ -103,9 +103,9 @@ body:
   - type: input
     id: other
     attributes:
-      label: <other_sw> Version.
-      description: Which <other_sw> version are you using? Run `<other_sw> --version` to check this.
-      placeholder: ex. <other_sw> 1.2.3
+      label: TODO other_sw version.
+      description: Which TODO other_sw version are you using? Run `TODO other_sw --version` to check this.
+      placeholder: ex. TODO other_sw 1.2.3
     validations:
       required: false
   - type: input
