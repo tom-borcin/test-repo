@@ -1,5 +1,6 @@
 name: Bug report
 description: Report bugs
+title: '[Bug]: '
 labels: ['Type: Bug']
 body:
   - type: checkboxes
@@ -156,7 +157,7 @@ body:
           std::cout << "Hello World!";
         }
         ```
-      render: Markdown
+      render: C++
     validations:
       required: false
   - type: textarea
