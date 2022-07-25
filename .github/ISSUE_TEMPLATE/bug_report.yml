@@ -150,7 +150,7 @@ body:
       label: Code to reproduce this issue.
       description: Please paste here the codeto reproduce this issue. If your code is longer than 30 lines, [GIST](https://gist.github.com/) is preferred.
       placeholder: void app_main() { std::cout << "Hello World!"; }
-      render: shell
+      render: C++
     validations:
       required: true
   - type: textarea
