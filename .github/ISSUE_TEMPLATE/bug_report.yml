@@ -1,6 +1,5 @@
 name: Bug report
 description: Report bugs
-title: '[Bug]: '
 labels: ['Type: Bug']
 body:
   - type: checkboxes
@@ -163,7 +162,18 @@ body:
     attributes:
       label: Debug Logs.
       description: Debug log goes here, should contain the backtrace, as well as the reset source if it is a crash.
-      placeholder: TODO
+      # placeholder: TODO
+      value: |
+        <details>
+          <summary>Click to expand!</summary>
+          
+          ## Heading
+          1. A numbered
+          2. list
+            * With some
+            * Sub bullets
+        </details>
+      render: Markdown
     validations:
       required: false
   - type: textarea
