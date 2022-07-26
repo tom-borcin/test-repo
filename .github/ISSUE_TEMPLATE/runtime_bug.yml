@@ -1,0 +1,186 @@
+name: Runtime bug report
+description: Report runtime bugs
+labels: ['Type: Bug']
+body:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Answers checklist.
+      description: Before submitting a new issue, please follow the checklist and try to find the answer.
+      options:
+        - label: I have read the documentation [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/) and the issue is not addressed there.
+          required: true
+        - label: I have updated my IDF branch (master or release) to the latest version and checked that the issue is present there.
+          required: true
+        - label: I have searched the issue tracker for a similar issue and not found a similar issue.
+          required: true
+  - type: input
+    id: devkit
+    attributes:
+      label: Development Kit.
+      description: On which Development Kit does this issue occur on? Run `TODO` to find it.
+      placeholder: ex. ESP32-Wrover-Kit | ESP32-DevKitC | ESP32-PICO-Kit | ESP32-LyraT | ESP32-LyraTD-MSC | none
+    validations:
+      required: true
+  - type: input
+    id: kit_version
+    attributes:
+      label: Kit version (for WroverKit/PicoKit/DevKitC).
+      description: On what Development Kit version does this issue occur on? Run `TODO` to find it.
+      placeholder: ex. v1 | v2 | v3 | v4
+    validations:
+      required: false
+  - type: input
+    id: idf_version
+    attributes:
+      label: IDF version.
+      description: On which IDF version does this issue occur on? Run `git describe --tags` to find it.
+      placeholder: ex. v3.2-dev-1148-g96cd3b75c
+    validations:
+      required: true
+  - type: dropdown
+    id: build_system
+    attributes:
+      label: Build System used.
+      multiple: false
+      options:
+        - Make
+        - CMake
+        - idf.py
+    validations:
+      required: true
+  - type: input
+    id: compiler_version
+    attributes:
+      label: Compiler version.
+      description: On which Compiler version does this issue occur on? Run `xtensa-esp32-elf-gcc --version` to find it.
+      placeholder: ex. 1.22.0-80-g6c4433a
+    validations:
+      required: true
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: Operating System used.
+      multiple: false
+      options:
+        - Windows
+        - Linux
+        - macOS
+    validations:
+      required: true
+  - type: dropdown
+    id: windows_environment
+    attributes:
+      label: Environment type (Windows only).
+      multiple: false
+      options:
+        - MSYS2 mingw32
+        - ESP Command Prompt
+        - Plain Command Prompt
+        - PowerShell
+    validations:
+      required: false
+  - type: input
+    id: using_ide
+    attributes:
+      label: Using an IDE?
+      description: Please give us more details if you are using IDE
+      placeholder: TODO
+    validations:
+      required: false
+  - type: dropdown
+    id: power_supply
+    attributes:
+      label: Power Supply used.
+      multiple: false
+      options:
+        - USB
+        - External 5V
+        - External 3.3V
+        - Battery
+    validations:
+      required: true
+  - type: input
+    id: other
+    attributes:
+      label: TODO other_sw version.
+      description: Which TODO other_sw version are you using? Run `TODO other_sw --version` to check this.
+      placeholder: ex. TODO other_sw 1.2.3
+    validations:
+      required: false
+  - type: input
+    id: command
+    attributes:
+      label: Full ESP-IDF command that was run.
+      description: Please enter the full ESP-IDF command.
+      placeholder: ex. `idf.py -p /dev/ttyUSB0 flash monitor`
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What is the expected behavior?
+      description: Please provide a clear and concise description of the expected behavior.
+      placeholder: ex. Flash onto the Device and launch IDF Monitor.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What is the actual behavior?
+      description: Please describe actual behavior.
+      placeholder: ex. Device flashes but IDF Monitor shows error TODO.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce.
+      description: 'How do you trigger this bug? Please walk us through it step by step.'
+      value: |
+        1. Step
+        2. Step
+        3. Step
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Code to reproduce this issue.
+      description: Please paste here the codeto reproduce this issue. If your code is longer than 30 lines, [GIST](https://gist.github.com/) is preferred.
+      value: |
+        void app_main()
+        {
+          std::cout << "Hello World!";
+        }
+      render: C++
+    validations:
+      required: false
+  - type: textarea
+    id: debug_logs
+    attributes:
+      label: Debug Logs.
+      description: Debug log goes here, should contain the backtrace, as well as the reset source if it is a crash.
+      placeholder: TODO
+    validations:
+      required: false
+  - type: textarea
+    id: other_items
+    attributes:
+      label: Other items if possible.
+      description: Please attach any of theese items if possible.
+      value: |
+        sdkconfig file (attach the sdkconfig file from your project folder)
+        elf file in the build folder (note this may contain all the code details and symbols of your project.)
+        coredump (This provides stacks of tasks.)
+    validations:
+      required: false
+  - type: textarea
+    id: more-info
+    attributes:
+      label: More Information.
+      description: Do you have any other information from investigating this?
+      placeholder: ex. I tried on my friend's Windows 10 PC and the command works there.
+    validations:
+      required: false

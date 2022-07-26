@@ -1,6 +1,5 @@
-name: Bug report
-description: Report bugs
-
+name: Installation or build bug report
+description: Report installation or build bugs
 labels: ['Type: Bug']
 body:
   - type: checkboxes

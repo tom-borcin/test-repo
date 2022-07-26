@@ -1,0 +1,70 @@
+name: Genreral issue report
+description: File a generic issue report
+labels: ['Type: Bug']
+body:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Answers checklist.
+      description: Before submitting a new issue, please follow the checklist and try to find the answer.
+      options:
+        - label: I have read the documentation [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/) and the issue is not addressed there.
+          required: true
+        - label: I have updated my IDF branch (master or release) to the latest version and checked that the issue is present there.
+          required: true
+        - label: I have searched the issue tracker for a similar issue and not found a similar issue.
+          required: true
+  - type: input
+    id: idf_version
+    attributes:
+      label: IDF version.
+      description: Which IDF version does this issue relate to?
+      placeholder: ex. v3.2-dev-1148-g96cd3b75c
+    validations:
+      required: false
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: Operating System used.
+      multiple: false
+      options:
+        - Windows
+        - Linux
+        - macOS
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: What is the expected behavior?
+      description: Please provide a clear and concise description of the expected behavior.
+      placeholder: ex. Flash onto the Device and launch IDF Monitor.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What is the actual behavior?
+      description: Please describe actual behavior.
+      placeholder: ex. Device flashes but IDF Monitor shows error TODO.
+    validations:
+      required: true
+  - type: textarea
+    id: other_items
+    attributes:
+      label: Other items if possible.
+      description: Please attach any of theese items if possible.
+      value: |
+        sdkconfig file (attach the sdkconfig file from your project folder)
+        elf file in the build folder (note this may contain all the code details and symbols of your project.)
+        coredump (This provides stacks of tasks.)
+    validations:
+      required: false
+  - type: textarea
+    id: more-info
+    attributes:
+      label: More Information.
+      description: Do you have any other information from investigating this?
+      placeholder: ex. I tried on my friend's Windows 10 PC and the command works there.
+    validations:
+      required: false
