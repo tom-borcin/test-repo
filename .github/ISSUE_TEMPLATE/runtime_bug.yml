@@ -83,7 +83,7 @@ body:
     attributes:
       label: What is the expected behavior?
       description: Please provide a clear and concise description of the expected behavior.
-      placeholder: ex. Flash onto the Device and launch IDF Monitor.
+      placeholder: TODO add example here
     validations:
       required: true
   - type: textarea
@@ -91,7 +91,7 @@ body:
     attributes:
       label: What is the actual behavior?
       description: Please describe actual behavior.
-      placeholder: ex. Device flashes but IDF Monitor shows error TODO.
+      placeholder: TODO add example here
     validations:
       required: true
   - type: textarea
@@ -111,7 +111,7 @@ body:
     attributes:
       label: Debug Logs.
       description: Debug log goes here, should contain the backtrace, as well as the reset source if it is a crash.
-      placeholder: TODO
+      placeholder: TODO add example here
     validations:
       required: false
   - type: textarea
