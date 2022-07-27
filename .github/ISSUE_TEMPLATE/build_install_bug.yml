@@ -15,46 +15,11 @@ body:
         - label: I have searched the issue tracker for a similar issue and not found a similar issue.
           required: true
   - type: input
-    id: devkit
-    attributes:
-      label: Development Kit.
-      description: On which Development Kit does this issue occur on? Run `TODO` to find it.
-      placeholder: ex. ESP32-Wrover-Kit | ESP32-DevKitC | ESP32-PICO-Kit | ESP32-LyraT | ESP32-LyraTD-MSC | none
-    validations:
-      required: true
-  - type: input
-    id: kit_version
-    attributes:
-      label: Kit version (for WroverKit/PicoKit/DevKitC).
-      description: On what Development Kit version does this issue occur on? Run `TODO` to find it.
-      placeholder: ex. v1 | v2 | v3 | v4
-    validations:
-      required: false
-  - type: input
     id: idf_version
     attributes:
       label: IDF version.
       description: On which IDF version does this issue occur on? Run `git describe --tags` to find it.
       placeholder: ex. v3.2-dev-1148-g96cd3b75c
-    validations:
-      required: true
-  - type: dropdown
-    id: build_system
-    attributes:
-      label: Build System used.
-      multiple: false
-      options:
-        - Make
-        - CMake
-        - idf.py
-    validations:
-      required: true
-  - type: input
-    id: compiler_version
-    attributes:
-      label: Compiler version.
-      description: On which Compiler version does this issue occur on? Run `xtensa-esp32-elf-gcc --version` to find it.
-      placeholder: ex. 1.22.0-80-g6c4433a
     validations:
       required: true
   - type: dropdown
@@ -69,53 +34,30 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: windows_environment
+    id: build
     attributes:
-      label: Environment type (Windows only).
+      label: How did you build your project?
       multiple: false
       options:
-        - MSYS2 mingw32
-        - ESP Command Prompt
-        - Plain Command Prompt
-        - PowerShell
+        - Command line with Make
+        - Command line with CMake
+        - Command line with idf.py
+        - Eclipse IDE
+        - CLion IDE
+        - VS Code IDE
+        - Other (please specify in More Information)
     validations:
-      required: false
-  - type: input
-    id: using_ide
-    attributes:
-      label: Using an IDE?
-      description: Please give us more details if you are using IDE
-      placeholder: TODO
-    validations:
-      required: false
+      required: true
   - type: dropdown
-    id: power_supply
+    id: windows_comand_line
     attributes:
-      label: Power Supply used.
+      label: If you are using Windows, please specify command line type.
       multiple: false
       options:
-        - USB
-        - External 5V
-        - External 3.3V
-        - Battery
-    validations:
-      required: true
-  - type: input
-    id: other
-    attributes:
-      label: TODO other_sw version.
-      description: Which TODO other_sw version are you using? Run `TODO other_sw --version` to check this.
-      placeholder: ex. TODO other_sw 1.2.3
+        - PowerShell
+        - CMD
     validations:
       required: false
-  - type: input
-    id: command
-    attributes:
-      label: Full ESP-IDF command that was run.
-      description: Please enter the full ESP-IDF command.
-      placeholder: ex. `idf.py -p /dev/ttyUSB0 flash monitor`
-    validations:
-      required: true
   - type: textarea
     id: expected
     attributes:
@@ -136,7 +78,7 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce.
-      description: 'How do you trigger this bug? Please walk us through it step by step.'
+      description: 'How do you trigger this bug? Please walk us through it step by step. If this is build bug, please attach sdkconfig file (from your project folder). Please attach your code here.'
       value: |
         1. Step
         2. Step
@@ -145,35 +87,11 @@ body:
     validations:
       required: true
   - type: textarea
-    id: code
-    attributes:
-      label: Code to reproduce this issue.
-      description: Please paste here the codeto reproduce this issue. If your code is longer than 30 lines, [GIST](https://gist.github.com/) is preferred.
-      value: |
-        void app_main()
-        {
-          std::cout << "Hello World!";
-        }
-      render: C++
-    validations:
-      required: false
-  - type: textarea
     id: debug_logs
     attributes:
-      label: Debug Logs.
-      description: Debug log goes here, should contain the backtrace, as well as the reset source if it is a crash.
+      label: Build or installation Logs.
+      description: Build or installation log goes here, should contain the backtrace, as well as the reset source if it is a crash.
       placeholder: TODO
-    validations:
-      required: false
-  - type: textarea
-    id: other_items
-    attributes:
-      label: Other items if possible.
-      description: Please attach any of theese items if possible.
-      value: |
-        sdkconfig file (attach the sdkconfig file from your project folder)
-        elf file in the build folder (note this may contain all the code details and symbols of your project.)
-        coredump (This provides stacks of tasks.)
     validations:
       required: false
   - type: textarea
