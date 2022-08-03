@@ -1,6 +1,5 @@
 name: General issue report
 description: File an issue report
-labels: ['Type: Bug']
 body:
   - type: checkboxes
     id: checklist
