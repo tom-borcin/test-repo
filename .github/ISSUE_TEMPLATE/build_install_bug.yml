@@ -63,7 +63,7 @@ body:
     attributes:
       label: What is the expected behavior?
       description: Please provide a clear and concise description of the expected behavior.
-      placeholder: TODO add example here
+      placeholder: I expected it to...
     validations:
       required: true
   - type: textarea
@@ -71,7 +71,7 @@ body:
     attributes:
       label: What is the actual behavior?
       description: Please describe actual behavior.
-      placeholder: TODO add example here
+      placeholder: Instead it...
     validations:
       required: true
   - type: textarea
@@ -91,7 +91,7 @@ body:
     attributes:
       label: Build or installation Logs.
       description: Build or installation log goes here, should contain the backtrace, as well as the reset source if it is a crash.
-      placeholder: TODO add log example
+      placeholder: Your log goes here.
     validations:
       required: false
   - type: textarea
