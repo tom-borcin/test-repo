@@ -104,7 +104,6 @@ body:
         2. Step
         3. Step
         ...
-      render: plain
     validations:
       required: true
   - type: textarea
