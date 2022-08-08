@@ -84,7 +84,6 @@ body:
         2. Step
         3. Step
         ...
-      render: plain
     validations:
       required: true
   - type: textarea
@@ -93,6 +92,7 @@ body:
       label: Build or installation Logs.
       description: Build or installation log goes here, should contain the backtrace, as well as the reset source if it is a crash.
       placeholder: Your log goes here.
+      render: plain
     validations:
       required: false
   - type: textarea
